@@ -1,0 +1,7 @@
+@font-face {
+  font-family: jost;
+  src: url(../jost.ttf);
+}
+body {
+  font-family: 'jost', Helvetica, sans-serif;
+}
