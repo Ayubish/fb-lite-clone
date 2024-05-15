@@ -1,5 +1,6 @@
 import minato from "../assets/img/minato.jpg";
 import { useState } from "react";
+import Verified from "../assets/icons/Verified";
 
 const Posts = () => {
   const [count, setCount] = useState(24);
@@ -17,7 +18,10 @@ const Posts = () => {
               className=" w-10 h-10 rounded-full"
             />
             <div>
-              <p className="font-medium">Minato Namikaze</p>
+              <p className="font-medium flex items-center gap-1">
+                Minato Namikaze
+                <Verified fillColor="dodgerblue" />
+              </p>
               <p className="text-xs flex gap-2 text-slate-500">
                 1d <i className="fa fa-globe"></i>
               </p>
