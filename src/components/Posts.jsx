@@ -1,11 +1,18 @@
 import minato from "../assets/img/minato.jpg";
 import { useState } from "react";
 import Verified from "../assets/icons/Verified";
+let unclicked = true;
 
 const Posts = () => {
   const [count, setCount] = useState(24);
   function handleLike() {
-    setCount(count + 1);
+    if (unclicked == true) {
+      unclicked = false;
+      setCount(count + 1);
+    } else {
+      unclicked = true;
+      setCount(count - 1);
+    }
   }
   return (
     <>
@@ -47,10 +54,10 @@ const Posts = () => {
         <div className="flex justify-between text-xl px-2 gap-2 text-center">
           <i
             onClick={handleLike}
-            class="fa fa-thumbs-up cursor-pointer bg-slate-300 py-1 basis-1/3 rounded-full text-slate-800"
+            class="fa fa-thumbs-up cursor-pointer bg-slate-300 py-2 basis-1/3 rounded-full text-slate-800"
           ></i>
-          <i class="fa fa-comment bg-slate-300 py-1 basis-1/3 rounded-full text-slate-800"></i>
-          <i class="fa fa-share bg-slate-300 py-1 basis-1/3 rounded-full text-slate-800"></i>
+          <i class="fa fa-comment bg-slate-300 py-2 basis-1/3 rounded-full text-slate-800"></i>
+          <i class="fa fa-share bg-slate-300 py-2 basis-1/3 rounded-full text-slate-800"></i>
         </div>
       </div>
     </>
