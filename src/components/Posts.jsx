@@ -8,10 +8,10 @@ const Posts = () => {
   function handleLike() {
     if (unclicked == true) {
       unclicked = false;
-      setCount(count + 1);
+      setCount("You and" count "others");
     } else {
       unclicked = true;
-      setCount(count - 1);
+      setCount(count);
     }
   }
   return (
