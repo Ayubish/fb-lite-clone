@@ -2,16 +2,17 @@ import minato from "../assets/img/minato.jpg";
 import { useState } from "react";
 import Verified from "../assets/icons/Verified";
 let unclicked = true;
-
+let temp = "";
 const Posts = () => {
   const [count, setCount] = useState(24);
   function handleLike() {
     if (unclicked == true) {
       unclicked = false;
+      temp = count;
       setCount("You and " + count +" others");
     } else {
       unclicked = true;
-      setCount(count);
+      setCount(temp);
     }
   }
   return (
