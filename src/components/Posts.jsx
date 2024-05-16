@@ -8,7 +8,7 @@ const Posts = () => {
   function handleLike() {
     if (unclicked == true) {
       unclicked = false;
-      setCount("You and" count "others");
+      setCount("You and " + count +" others");
     } else {
       unclicked = true;
       setCount(count);
