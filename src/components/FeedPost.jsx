@@ -9,7 +9,7 @@ const FeedPost = () => {
           type="text"
           name="writepost"
           id=""
-          className="rounded-full h-10 p-3 basis-3/4 bg-slate-200"
+          className="rounded-full h-10 p-3 basis-3/4 bg-slate-200 outline-0"
           placeholder="What's on your mind?"
         />
         <div className="h-10">
